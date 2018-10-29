@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/navigation_graph"
+            app:startDestination="@id/peoplesListFragment">
+
+    <fragment
+            android:id="@+id/peoplesListFragment"
+            android:name="com.victorrosas.vendormanager.view.list.VendorListFragment"
+            android:label="iMet"
+            tools:layout="@layout/fragment_vendors_list">
+        <action
+                android:id="@+id/action_vendorsListFragment_to_addVendorFragment"
+                app:destination="@id/addVendorFragment" />
+        <action
+                android:id="@+id/action_vendorsListFragment_to_vendorDetailsFragment"
+                app:destination="@id/vendorDetailsFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/addVendorFragment"
+            android:name="com.victorrosas.vendormanager.view.add.addVendorFragment"
+            android:label="Add People"
+            tools:layout="@layout/fragment_add_vendors" />
+    <fragment
+            android:id="@+id/vendorDetailsFragment"
+            android:name="com.victorrosas.vendormanager.view.details.vendorDetailsFragment"
+            android:label="People Details"
+            tools:layout="@layout/fragment_vendor_details" />
+</navigation>
